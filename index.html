@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DarkHub</title>
+  <meta name="description" content="Dark premium hub">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+  <div id="verification" class="gate">
+    <div class="gate-card">
+      <div class="brand-mark">D</div>
+      <div class="eyebrow">DARKHUB SECURITY</div>
+      <h1>Verificação de segurança</h1>
+      <p>Confirme que você é uma pessoa para acessar o conteúdo.</p>
+      <div id="turnstile" class="turnstile-box"></div>
+      <div id="gate-status" class="status">Aguardando verificação...</div>
+      <div class="mini">Proteção anti-bot • acesso seguro</div>
+    </div>
+  </div>
+
+  <div id="app" class="hidden">
+    <header class="nav">
+      <a class="logo" href="#">
+        <span class="logo-icon">D</span>
+        <span>Dark<span>Hub</span></span>
+      </a>
+      <nav>
+        <a href="#home">Início</a>
+        <a href="#products">Produtos</a>
+        <a href="#about">Sobre</a>
+      </nav>
+      <button id="logout" class="ghost">Sair</button>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <div class="pill"><span></span> SISTEMA ONLINE</div>
+          <h2>Seu hub.<br><strong>Seu estilo.</strong></h2>
+          <p>Uma vitrine dark premium para organizar scripts, ferramentas, arquivos e produtos digitais.</p>
+          <a class="primary" href="#products">Explorar produtos <b>→</b></a>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-top"><span>STATUS</span><span class="dot"></span></div>
+          <div class="panel-number">100%</div>
+          <div class="panel-label">Protegido por verificação</div>
+          <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">CATÁLOGO</div>
+            <h3>Produtos em destaque</h3>
+          </div>
+          <input id="search" class="search" placeholder="Pesquisar...">
+        </div>
+        <div id="products-grid" class="grid"></div>
+      </section>
+
+      <section id="about" class="about">
+        <div>
+          <div class="eyebrow">DARKHUB</div>
+          <h3>Visual premium, estrutura simples.</h3>
+        </div>
+        <p>Personalize nome, logo, cores, produtos e links. O projeto já vem preparado para usar Cloudflare Turnstile com validação no servidor.</p>
+      </section>
+    </main>
+
+    <footer>© <span id="year"></span> DarkHub. Todos os direitos reservados.</footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
